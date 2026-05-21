@@ -158,6 +158,23 @@ font-size: 0.85rem;
   </div>
 </div>
 
+  <script>
+var mydate=new Date()
+var year=mydate.getYear()
+if (year < 1000)
+year+=1900
+var day=mydate.getDay()
+var month=mydate.getMonth()
+var daym=mydate.getDate()
+if (daym<10)
+daym="0"+daym
+var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+document.write("<font color='666666' size='4' face='Arial'><strong>"+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"</strong></font>")
+</script>
+
+
+  
 <div class="container"> 
 <header> 
 <h1>e-wavecharts.com</h1> 
@@ -265,21 +282,7 @@ font-size: 0.85rem;
 &nbsp;&nbsp;&nbsp;&nbsp;
 <a href="privacy.htm">Privacy Policy</a></center>
  
-    <script>
-var mydate=new Date()
-var year=mydate.getYear()
-if (year < 1000)
-year+=1900
-var day=mydate.getDay()
-var month=mydate.getMonth()
-var daym=mydate.getDate()
-if (daym<10)
-daym="0"+daym
-var dayarray=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
-var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
-document.write("<font color='666666' size='4' face='Arial'><strong>"+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"</strong></font>")
-</script>
-
+  
 <footer> 
  &copy; 2001  <script type="text/javascript">
 document.write(dateObject.getFullYear());
