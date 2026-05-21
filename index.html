@@ -360,13 +360,10 @@ async function getLatestCommitTime() {
 }
 getLatestCommitTime();
 
-async function loadLiveComments() {
-    const username = "ewavecharts";
-    const repo = "ewavecharts.github.io";
-    
+ async function loadLiveComments() {
     try {
-        // Fetches your raw text file straight from your repository main branch
-        const response = await fetch('https://githubusercontent.com' + username + '/' + repo + '/main/updates.md');
+        // FIXED: Pulls directly from your own domain, bypassing CORS network security completely
+        const response = await fetch('./updates.md');
         if (!response.ok) throw new Error();
         const textData = await response.text();
         document.getElementById('live-market-comments').innerText = textData;
